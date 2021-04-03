@@ -1,0 +1,115 @@
+<?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * Skill Cat
+ *
+ * @package    local_skillcat
+ * @copyright --
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+namespace local_skillcat\webservice;
+
+global $CFG;
+require_once("$CFG->libdir/externallib.php");
+
+/**
+ * skillcat job_set_application class
+ * @copyright --
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class job_set_application extends \external_api {
+
+    /**
+     * Returns description of method parameters
+     *
+     * @return external_function_parameters
+     */
+    public static function set_application_parameters() {
+        return new \external_function_parameters(
+            array(
+                'userid' => new \external_value(PARAM_INT, 'the user.id of the user applying for the job', VALUE_REQUIRED, '', NULL_NOT_ALLOWED),
+                'jobid' => new \external_value(PARAM_INT, 'the skillcat_job.id of the job being applied for', VALUE_REQUIRED, '', NULL_NOT_ALLOWED),
+            )
+        );
+    }
+
+    /**
+     * Get records
+     *
+     * @param int $userid userid
+     * @params int $jobid jobid
+     * @return array An array of records
+     * @throws coding_exception
+     * @throws dml_exception
+     * @throws invalid_parameter_exception
+     */
+    public static function set_application(int $userid, int $jobid) {
+        global $DB;
+
+        $params = self::validate_parameters(
+            self::set_application_parameters(),
+            array(
+                'userid' => $userid,
+                'jobid' => $jobid
+            )
+        );
+
+        // Clean the values.
+        foreach ($params as $param) {
+            $cleanedvalue = clean_param($param, PARAM_INT);
+            if ( $param != $cleanedvalue) {
+                throw new \invalid_parameter_exception('Param invalid: ' . $param . '(cleaned value: '.$cleanedvalue.')');
+            }
+        }
+        
+        // check the user exists en db
+        if(!$DB->record_exists('user', array('id' => $params['userid']))) {
+            throw new \moodle_exception("User not exists: " . $params['userid']);
+        }
+
+        // check the skillcat exists en db
+        if(!$DB->record_exists('local_skillcat_job', array('id' => $params['jobid']))) {
+            throw new \moodle_exception("Skillcat Job not exists: " . $params['jobid']);
+        }
+        
+        $record = new \stdClass();
+        $record->userid = $params['userid'];
+        $record->jobid = $params['jobid'];
+        $record->timecreated = time();
+        if (!$record->id = $DB->insert_record('local_skillcat_job_applicant', $record)) {
+            throw new \moodle_exception("There was a problem saving in the database the device with key: " . $params['userid'] . "-" . $params['jobid']);
+        }
+        return $record;
+    }
+
+    /**
+     * Returns description of method result value
+     *
+     * @return external_description
+     */
+    public static function set_application_returns() {
+        return new \external_single_structure(
+                array(
+                    'id' => new \external_value(PARAM_INT, 'ID'),
+                    'userid' => new \external_value(PARAM_INT, 'userid', VALUE_REQUIRED),
+                    'jobid' => new \external_value(PARAM_INT, 'jobid', VALUE_REQUIRED),
+                    'timecreated' => new \external_value(PARAM_RAW, 'timecreated', VALUE_REQUIRED),
+                )
+            );
+    }
+}

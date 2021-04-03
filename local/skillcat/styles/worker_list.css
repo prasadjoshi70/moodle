@@ -1,0 +1,2506 @@
+/* screen - 3-3-4-1-worker-listing-all-workers-view */
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,600");
+.margin-row {
+    margin-top: 20px;
+}
+.ms-drop.bottom {
+    min-width: 200px;
+    left: 20px;
+}
+.ms-parent {
+    z-index: 1;
+    min-width: 138px;
+}
+.ms-drop ul > li.selected {
+    color: var(--flamingo);
+}
+.ms-drop input[type="checkbox"].selected {
+    color: var(--flamingo);
+}
+.skillcat.table {
+    margin-top: 60px;
+    color: var(--black);
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    flex-shrink: 1;
+    letter-spacing: 0.00px;
+    line-height: normal;
+}
+.skillcat.table td {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.skillcat.table td.td_no_pading {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.table_sort {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 19px;
+    margin-left: 3px;
+    position: relative;
+    width: 10px;
+    float: right;
+}
+
+.worker_list_body {
+    min-height: 250px;
+}
+.skillcat.btn {
+    font-family: 'Fira Sans', Helvetica;
+    background-color: transparent;
+    flex-shrink: 1;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 138px;
+    margin-left: 13px;
+}
+.skillcat.btn.active {
+    background-color: var(--flamingo-3) !important;
+    border-color: var(--flamingo-2) !important;
+    border: 1px solid var(--flamingo-2);
+    color: var(--flamingo) !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.component-wrapper a,
+.screen a {
+    text-decoration: none;
+    display: contents;
+}
+
+.full-width-a {
+    width: 100%;
+}
+
+.full-height-a {
+    height: 100%;
+}
+
+.screen textarea:focus,
+.screen input:focus {
+    outline: none;
+}
+
+.screen *,
+.component-wrapper * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+.screen div {
+    -webkit-text-size-adjust: none;
+}
+
+.container-center-vertical,
+.container-center-horizontal {
+    pointer-events: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+.container-center-vertical {
+    align-items: center;
+    height: 100%;
+}
+
+.container-center-horizontal {
+    justify-content: center;
+    width: 100%;
+}
+
+.container-center-vertical > *,
+.container-center-horizontal > * {
+    pointer-events: auto;
+    flex-shrink: 0;
+}
+
+.component-wrapper,
+.screen {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    word-break: break-word;
+}
+
+.auto-animated div {
+    opacity: 0;
+    position: absolute;
+    --z-index: -1;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    opacity: 0;
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.animate-appear {
+    opacity: 0;
+    display: block;
+    animation: reveal 0.3s ease-in-out 1 normal forwards;
+}
+
+.animate-disappear {
+    opacity: 1;
+    display: block;
+    animation: reveal 0.3s ease-in-out 1 reverse forwards;
+}
+
+.animate-nodelay {
+    animation-delay: 0s;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.align-self-flex-start {
+    align-self: flex-start;
+}
+.align-self-flex-end {
+    align-self: flex-end;
+}
+.align-self-flex-center {
+    align-self: center;
+}
+.valign-text-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.valign-text-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+input:focus {
+    outline: none;
+}
+.component-wrapper,
+.component-wrapper * {
+    pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper a,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe,
+.listeners-active,
+.listeners-active * {
+    pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+    visibility: hidden !important;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+    cursor: pointer;
+}
+.border-1-5px-flamingo {
+    border: 1.5px solid var(--flamingo);
+}
+.border-1-5px-melon {
+    border: 1.5px solid var(--melon);
+}
+.border-1-5px-white-2 {
+    border: 1.5px solid var(--white-2);
+}
+.border-1px-black {
+    border: 1px solid var(--black);
+}
+.border-1px-black-4 {
+    border: 1px solid var(--black-4);
+}
+.border-1px-flamingo-2 {
+    border: 1px solid var(--flamingo-2);
+}
+.border-class-1 {
+    border: 1px solid rgba(0,0,0,0.4);
+}
+.firasans-light-black-12px {
+    color: var(--black);
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+}
+.firasans-light-black-14px {
+    color: var(--black);
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+}
+.firasans-normal-black-14px {
+    color: var(--black);
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+.firasans-normal-black-14px-2 {
+    color: var(--black-2);
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+.firasans-normal-black-16px {
+    color: var(--black);
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+.firasans-normal-black-16px-2 {
+    color: var(--black-3);
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+.firasans-normal-black-20px {
+    color: rgba(0,0,0,0.7);
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+.firasans-normal-flamingo-14px {
+    color: var(--flamingo);
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+.firasans-normal-flamingo-20px {
+    color: var(--flamingo);
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+.firasans-normal-gravel-20px {
+    color: var(--gravel);
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+.x3-3-4-1-worker-listing-all-workers-view {
+    align-items: center;
+    background-color: var(--white);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
+    width: 1440px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .arrow-down-1-Bbq7Vy {
+    background-color: transparent;
+    height: 10px;
+    left: 0px;
+    position: absolute;
+    top: 9px;
+    width: 10px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .arrow-down-6-KFb6dZ {
+    background-color: transparent;
+    height: 10px;
+    left: 0px;
+    position: absolute;
+    top: 9px;
+    width: 10px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .arrow-down-7-tnpwXC {
+    background-color: transparent;
+    height: 10px;
+    left: 0px;
+    position: absolute;
+    top: 9px;
+    width: 10px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .arrow-down-8-q71P5p {
+    background-color: transparent;
+    height: 10px;
+    left: 0px;
+    position: absolute;
+    top: 9px;
+    width: 10px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .arrow-up-1-Bbq7Vy {
+    background-color: transparent;
+    height: 10px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 10px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .arrow-up-2-KFb6dZ {
+    background-color: transparent;
+    height: 10px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 10px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .arrow-up-3-tnpwXC {
+    background-color: transparent;
+    height: 10px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 10px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .arrow-up-4-q71P5p {
+    background-color: transparent;
+    height: 10px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 10px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .certification-filter-GyJUNH {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 8px;
+    position: relative;
+    width: 102px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .certifications-E6ihlU {
+    background-color: transparent;
+    height: auto;
+    left: 8px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .epa-608-certification-dXBp89 {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 62px;
+    min-height: 17px;
+    min-width: 133px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .eric-g-7jZkao {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 9px;
+    min-height: 17px;
+    min-width: 42px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .eric-g-JKW3Vi {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 9px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 42px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .eric-g-K3hbXo {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 9px;
+    min-height: 17px;
+    min-width: 42px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .eric-g-LHIP7X {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 9px;
+    min-height: 17px;
+    min-width: 42px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .eric-g-Mix6Ir {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 9px;
+    min-height: 17px;
+    min-width: 42px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .eric-g-V5Z2KQ {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 9px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 42px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .eric-g-cmq4MI {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 9px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 42px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .eric-g-hxhGeY {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 9px;
+    min-height: 17px;
+    min-width: 42px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .eric-g-w3soHd {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 5.0px;
+    margin-left: 9px;
+    min-height: 17px;
+    min-width: 142px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .eric-g-zPwFNd {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 9px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 42px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .flex-col-C61RwL {
+    align-items: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    height: auto;
+    justify-content: flex-start;
+    margin-top: -1px;
+    position: relative;
+    width: 1440px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .flex-row-0xy0vn {
+    align-items: flex-start;
+    align-self: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 34px;
+    justify-content: flex-start;
+    margin-top: 23px;
+    min-width: 1255px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .flex-row-C61RwL {
+    align-items: flex-end;
+    align-self: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 19px;
+    justify-content: flex-start;
+    margin-left: 100px;
+    margin-top: 61px;
+    min-width: 1015px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .flex-row-VMr6Om {
+    align-items: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 30px;
+    justify-content: center;
+    margin-left: 3.0px;
+    margin-top: 62px;
+    min-width: 409px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .interview-candidate-0bXQWH {
+    background-color: transparent;
+    height: auto;
+    left: 27px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .interview-candidate-C5wBIz {
+    background-color: transparent;
+    height: auto;
+    left: 27px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .interview-candidate-DHIUEc {
+    background-color: transparent;
+    height: auto;
+    left: 27px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .interview-candidate-I7sBuj {
+    background-color: transparent;
+    height: auto;
+    left: 27px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .interview-candidate-UWjl30 {
+    background-color: transparent;
+    height: auto;
+    left: 27px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .interview-candidate-ilcdB2 {
+    background-color: transparent;
+    height: auto;
+    left: 27px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .interview-candidate-mQE76A {
+    background-color: transparent;
+    height: auto;
+    left: 27px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .interview-candidate-mthsXB {
+    background-color: transparent;
+    height: auto;
+    left: 27px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .interview-candidate-wc3T2c {
+    background-color: transparent;
+    height: auto;
+    left: 27px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .interview-candidate-xC3sJE {
+    background-color: transparent;
+    height: auto;
+    left: 27px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .job-applicants-IOjpZF {
+    background-color: transparent;
+    height: auto;
+    left: 22px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 9px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .job-applicants-view-GyJUNH {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 13px;
+    position: relative;
+    width: 138px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .line-10-C61RwL {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 1px;
+    margin-left: 3.0px;
+    margin-top: 22px;
+    position: relative;
+    width: 1275px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .line-11-C61RwL {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 1px;
+    margin-left: 3.0px;
+    margin-top: 22px;
+    position: relative;
+    width: 1275px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .line-12-C61RwL {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 1px;
+    margin-right: 7.0px;
+    margin-top: 22px;
+    position: relative;
+    width: 1275px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .line-13-C61RwL {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 1px;
+    margin-right: 7.0px;
+    margin-top: 22px;
+    position: relative;
+    width: 1275px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .line-14-C61RwL {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 1px;
+    margin-right: 7.0px;
+    margin-top: 22px;
+    position: relative;
+    width: 1275px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .line-15-C61RwL {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 1px;
+    margin-right: 7.0px;
+    margin-top: 22px;
+    position: relative;
+    width: 1275px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .line-5-C61RwL {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 1px;
+    margin-left: 7.0px;
+    margin-top: 4px;
+    position: relative;
+    width: 1275px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .line-6-C61RwL {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 1px;
+    margin-left: 3.0px;
+    margin-top: 22px;
+    position: relative;
+    width: 1275px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .line-7-C61RwL {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 1px;
+    margin-left: 3.0px;
+    margin-top: 10px;
+    position: relative;
+    width: 1275px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .line-8-C61RwL {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 1px;
+    margin-left: 3.0px;
+    margin-top: 22px;
+    position: relative;
+    width: 1275px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .line-9-C61RwL {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 1px;
+    margin-left: 3.0px;
+    margin-top: 22px;
+    position: relative;
+    width: 1275px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .location-dXBp89 {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 91px;
+    min-height: 17px;
+    min-width: 57px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .mask-group-7jZkao {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 24px;
+    position: relative;
+    width: 24px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .mask-group-JKW3Vi {
+    align-self: flex-end;
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 24px;
+    margin-bottom: 1px;
+    position: relative;
+    width: 24px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .mask-group-K3hbXo {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 24px;
+    position: relative;
+    width: 24px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .mask-group-LHIP7X {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 24px;
+    position: relative;
+    width: 24px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .mask-group-Mix6Ir {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 24px;
+    position: relative;
+    width: 24px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .mask-group-V5Z2KQ {
+    align-self: flex-end;
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 24px;
+    margin-bottom: 1px;
+    position: relative;
+    width: 24px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .mask-group-cmq4MI {
+    align-self: flex-end;
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 24px;
+    margin-bottom: 1px;
+    position: relative;
+    width: 24px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .mask-group-hxhGeY {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 24px;
+    position: relative;
+    width: 24px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .mask-group-w3soHd {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 24px;
+    margin-bottom: 4.0px;
+    position: relative;
+    width: 24px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .mask-group-zPwFNd {
+    align-self: flex-end;
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 24px;
+    margin-bottom: 1px;
+    position: relative;
+    width: 24px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .name-dXBp89 {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    min-height: 17px;
+    min-width: 39px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .nav-bar-0xy0vn {
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.1);;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 120px;
+    justify-content: flex-end;
+    min-width: 1440px;
+    padding: 0 83px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .next-page-button-BdpSxK {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 30px;
+    margin-left: 155px;
+    position: relative;
+    width: 127px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .next-page-dHKNqe {
+    background-color: transparent;
+    height: auto;
+    left: 29px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 6px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .no-cmq4MI {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 132px;
+    margin-top: 1.0px;
+    min-height: 17px;
+    min-width: 20px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .overlap-group-0xy0vn {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 68px;
+    margin-left: 100px;
+    margin-top: 31px;
+    position: relative;
+    width: 571px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .overlap-group1-w3soHd {
+    align-self: flex-start;
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    position: relative;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .overlap-group10-7jZkao {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 160px;
+    position: relative;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .overlap-group2-K3hbXo {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 167px;
+    position: relative;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .overlap-group3-cmq4MI {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 171px;
+    position: relative;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .overlap-group4-LHIP7X {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 167px;
+    position: relative;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .overlap-group5-V5Z2KQ {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 165px;
+    position: relative;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .overlap-group6-hxhGeY {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 165px;
+    position: relative;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .overlap-group7-JKW3Vi {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 162px;
+    position: relative;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .overlap-group8-Mix6Ir {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 162px;
+    position: relative;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .overlap-group9-zPwFNd {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 160px;
+    position: relative;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .post-a-job-UfJmyO {
+    background-color: transparent;
+    height: auto;
+    left: 20px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 10px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .post-a-job-menu-not-selected-9ncWUP {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 44px;
+    margin-left: 28px;
+    position: relative;
+    width: 134px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .previous-page-DT0iX0 {
+    background-color: transparent;
+    height: auto;
+    left: 18px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 6px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .previous-page-button-BdpSxK {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 30px;
+    position: relative;
+    width: 127px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .profile-menu-not-selected-9ncWUP {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 44px;
+    margin-left: 28px;
+    position: relative;
+    width: 104px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .profile-rS0JxO {
+    background-color: transparent;
+    height: auto;
+    left: 21px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 10px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-128-UfJmyO {
+    background-color: var(--white);
+    border-radius: 5px;
+    height: 44px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 132px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-129-rNCP5y {
+    background-color: rgba(253,238,233,1.0);
+    border-radius: 5px;
+    height: 44px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 162px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-130-UzAWFp {
+    background-color: var(--white);
+    border-radius: 5px;
+    height: 44px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 208px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-131-rS0JxO {
+    background-color: var(--white);
+    border-radius: 5px;
+    height: 44px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 102px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-27-4xHx3x {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 136px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-28-IOjpZF {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 136px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-29-EMQpBm {
+    background-color: rgba(240,85,35,0.1);
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 136px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-30-7bqCg8 {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-36-x8IQqY {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-37-QrIDdW {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-39-UWjl30 {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-41-dHKNqe {
+    background-color: transparent;
+    border-radius: 5px;
+    height: 30px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 125px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-42-DT0iX0 {
+    background-color: transparent;
+    border-radius: 5px;
+    height: 30px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 125px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-43-mQE76A {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-44-DHIUEc {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-45-xC3sJE {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-46-mthsXB {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-47-ilcdB2 {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-48-C5wBIz {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-49-I7sBuj {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-50-0bXQWH {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-51-wc3T2c {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 190px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .rectangle-52-E6ihlU {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 34px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .roles-filter-GyJUNH {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 8px;
+    position: relative;
+    width: 102px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .roles-x8IQqY {
+    background-color: transparent;
+    height: auto;
+    left: 33px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .row-1-C61RwL {
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 46px;
+    justify-content: flex-start;
+    margin-left: 27.0px;
+    margin-top: 22px;
+    min-width: 1271px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .row-10-C61RwL {
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 34px;
+    justify-content: flex-start;
+    margin-left: 22.0px;
+    margin-top: 22px;
+    min-width: 1262px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .row-2-C61RwL {
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 34px;
+    justify-content: flex-start;
+    margin-left: 27.0px;
+    margin-top: 22px;
+    min-width: 1267px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .row-3-C61RwL {
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 34px;
+    justify-content: flex-start;
+    margin-left: 25.0px;
+    margin-top: 22px;
+    min-width: 1269px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .row-4-C61RwL {
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 34px;
+    justify-content: flex-start;
+    margin-left: 25.0px;
+    margin-top: 22px;
+    min-width: 1269px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .row-5-C61RwL {
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 34px;
+    justify-content: flex-start;
+    margin-left: 27.0px;
+    margin-top: 22px;
+    min-width: 1267px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .row-6-C61RwL {
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 34px;
+    justify-content: flex-start;
+    margin-left: 27.0px;
+    margin-top: 22px;
+    min-width: 1267px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .row-7-C61RwL {
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 34px;
+    justify-content: flex-start;
+    margin-left: 20.0px;
+    margin-top: 22px;
+    min-width: 1264px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .row-8-C61RwL {
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 34px;
+    justify-content: flex-start;
+    margin-left: 20.0px;
+    margin-top: 22px;
+    min-width: 1264px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .row-9-C61RwL {
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 34px;
+    justify-content: flex-start;
+    margin-left: 22.0px;
+    margin-top: 22px;
+    min-width: 1262px;
+    position: relative;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .san-diego-ca-7jZkao {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 56px;
+    min-height: 17px;
+    min-width: 88px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .san-diego-ca-JKW3Vi {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 56px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 88px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .san-diego-ca-K3hbXo {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 54px;
+    min-height: 17px;
+    min-width: 88px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .san-diego-ca-LHIP7X {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 56px;
+    min-height: 17px;
+    min-width: 88px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .san-diego-ca-Mix6Ir {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 56px;
+    min-height: 17px;
+    min-width: 88px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .san-diego-ca-V5Z2KQ {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 56px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 88px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .san-diego-ca-cmq4MI {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 56px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 88px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .san-diego-ca-hxhGeY {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 56px;
+    min-height: 17px;
+    min-width: 88px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .san-diego-ca-w3soHd {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 5.0px;
+    min-height: 17px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .san-diego-ca-zPwFNd {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 56px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 88px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .send-assessment-nu-not-selected-9ncWUP {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 44px;
+    margin-left: 28px;
+    position: relative;
+    width: 210px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .send-assessments-UzAWFp {
+    background-color: transparent;
+    height: auto;
+    left: 21px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 10px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .skills-QrIDdW {
+    background-color: transparent;
+    height: auto;
+    left: 33px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .skills-filter-GyJUNH {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 8px;
+    position: relative;
+    width: 102px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .sort-1-dXBp89 {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 19px;
+    margin-left: 3px;
+    position: relative;
+    width: 10px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .sort-2-dXBp89 {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 19px;
+    margin-left: 3px;
+    position: relative;
+    width: 10px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .sort-3-dXBp89 {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 19px;
+    margin-left: 3px;
+    position: relative;
+    width: 10px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .sort-4-dXBp89 {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 19px;
+    margin-left: 3px;
+    position: relative;
+    width: 10px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .span0-RX7T91 {
+    color: rgba(0,0,0,0.7);
+    font-style: normal;
+}
+.x3-3-4-1-worker-listing-all-workers-view .span1-RX7T91 {
+    color: rgba(0,0,0,1.0);
+    font-style: normal;
+}
+.x3-3-4-1-worker-listing-all-workers-view .span2-RX7T91 {
+    color: rgba(0,0,0,0.5);
+    font-style: normal;
+}
+.x3-3-4-1-worker-listing-all-workers-view .span3-RX7T91 {
+    color: rgba(0,0,0,1.0);
+    font-style: normal;
+}
+.x3-3-4-1-worker-listing-all-workers-view .span4-RX7T91 {
+    color: rgba(0,0,0,0.7);
+    font-style: normal;
+}
+.x3-3-4-1-worker-listing-all-workers-view .span5-RX7T91 {
+    color: rgba(0,0,0,1.0);
+    font-style: normal;
+}
+.x3-3-4-1-worker-listing-all-workers-view .span6-RX7T91 {
+    color: rgba(0,0,0,0.5);
+    font-style: normal;
+}
+.x3-3-4-1-worker-listing-all-workers-view .state-7bqCg8 {
+    background-color: transparent;
+    height: auto;
+    left: 34px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .state-filter-GyJUNH {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 383px;
+    position: relative;
+    width: 102px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .technician-level-dXBp89 {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 47px;
+    min-height: 17px;
+    min-width: 107px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .tests-completed-4xHx3x {
+    background-color: transparent;
+    height: auto;
+    left: 16px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 9px;
+    width: 107px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .tests-completed-view-GyJUNH {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    margin-left: 13px;
+    position: relative;
+    width: 138px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .use-this-page-t-in-our-database-y1HRxC {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 44px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .view-all-EMQpBm {
+    background-color: transparent;
+    height: auto;
+    left: 43px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 9px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .view-all-view-GyJUNH {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 34px;
+    position: relative;
+    width: 138px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .view-workers-menu-selected-9ncWUP {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 44px;
+    position: relative;
+    width: 164px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .view-workers-rNCP5y {
+    background-color: transparent;
+    height: auto;
+    left: 21px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 10px;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .worker-database-y1HRxC {
+    background-color: transparent;
+    color: var(--black);
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: 510px;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x0-7jZkao {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 169px;
+    min-height: 17px;
+    min-width: 10px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x0-JKW3Vi {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 169px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 10px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x0-K3hbXo {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 64px;
+    min-height: 17px;
+    min-width: 10px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x0-LHIP7X {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 169px;
+    min-height: 17px;
+    min-width: 10px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x0-Mix6Ir {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 169px;
+    min-height: 17px;
+    min-width: 10px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x0-V5Z2KQ {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 169px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 10px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x0-hxhGeY {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 169px;
+    min-height: 17px;
+    min-width: 10px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x0-w3soHd {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 5.0px;
+    min-height: 17px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x0-zPwFNd {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 169px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 10px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x1-cmq4MI {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 64px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 9px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x10-20-of-115-workers-0xy0vn {
+    background-color: transparent;
+    color: transparent;
+    flex-shrink: 1;
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 50px;
+    margin-top: 39px;
+    min-height: 17px;
+    min-width: 129px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x10-K3hbXo {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 168px;
+    min-height: 17px;
+    min-width: 16px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x2-7jZkao {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 64px;
+    min-height: 17px;
+    min-width: 9px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x2-JKW3Vi {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 64px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 9px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x2-LHIP7X {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 64px;
+    min-height: 17px;
+    min-width: 9px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x2-Mix6Ir {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 64px;
+    min-height: 17px;
+    min-width: 9px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x2-V5Z2KQ {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 64px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 9px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x2-hxhGeY {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    margin-left: 64px;
+    min-height: 17px;
+    min-width: 9px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x2-w3soHd {
+    align-self: flex-end;
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    min-height: 34px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x2-zPwFNd {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 64px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 9px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x4-cmq4MI {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 169px;
+    margin-top: 7.0px;
+    min-height: 17px;
+    min-width: 10px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x76100-cmq4MI {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 227px;
+    margin-top: 1.0px;
+    min-height: 17px;
+    min-width: 44px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x82100-K3hbXo {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 7.0px;
+    margin-left: 219px;
+    min-height: 17px;
+    min-width: 45px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x87100-7jZkao {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 7.0px;
+    margin-left: 227px;
+    min-height: 17px;
+    min-width: 44px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x87100-JKW3Vi {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 227px;
+    margin-top: 1.0px;
+    min-height: 17px;
+    min-width: 44px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x87100-LHIP7X {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 7.0px;
+    margin-left: 227px;
+    min-height: 17px;
+    min-width: 44px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x87100-Mix6Ir {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 7.0px;
+    margin-left: 227px;
+    min-height: 17px;
+    min-width: 44px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x87100-V5Z2KQ {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 227px;
+    margin-top: 1.0px;
+    min-height: 17px;
+    min-width: 44px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x87100-hxhGeY {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 7.0px;
+    margin-left: 227px;
+    min-height: 17px;
+    min-width: 44px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x87100-w3soHd {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 11.0px;
+    min-height: 17px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .x87100-zPwFNd {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 227px;
+    margin-top: 1.0px;
+    min-height: 17px;
+    min-width: 44px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .years-of-hvac-exp-dXBp89 {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 88px;
+    min-height: 17px;
+    min-width: 119px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .years-of-skilled-trade-exp-dXBp89 {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 52px;
+    min-height: 17px;
+    min-width: 168px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .yes-7jZkao {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 7.0px;
+    margin-left: 132px;
+    min-height: 17px;
+    min-width: 24px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .yes-JKW3Vi {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 132px;
+    margin-top: 1.0px;
+    min-height: 17px;
+    min-width: 24px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .yes-K3hbXo {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 7.0px;
+    margin-left: 133px;
+    min-height: 17px;
+    min-width: 24px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .yes-LHIP7X {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 7.0px;
+    margin-left: 132px;
+    min-height: 17px;
+    min-width: 24px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .yes-Mix6Ir {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 7.0px;
+    margin-left: 132px;
+    min-height: 17px;
+    min-width: 24px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .yes-V5Z2KQ {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 132px;
+    margin-top: 1.0px;
+    min-height: 17px;
+    min-width: 24px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .yes-hxhGeY {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 7.0px;
+    margin-left: 132px;
+    min-height: 17px;
+    min-width: 24px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .yes-w3soHd {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-bottom: 11.0px;
+    min-height: 17px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.x3-3-4-1-worker-listing-all-workers-view .yes-zPwFNd {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    margin-left: 132px;
+    margin-top: 1.0px;
+    min-height: 17px;
+    min-width: 24px;
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+:root {
+    --black: rgba(0,0,0,1.0);
+    --black-2: rgba(0,0,0,0.8);
+    --black-3: rgba(0,0,0,0.5);
+    --black-4: rgba(0,0,0,0.3);
+    --flamingo: rgba(240,85,35,1.0);
+    --flamingo-2: rgba(240,85,35,0.3);
+    --flamingo-3: rgba(240,85,35,0.1);
+    --gravel: rgba(76,76,76,1.0);
+    --melon: rgba(249,189,170,1.0);
+    --white: rgba(255,255,255,1.0);
+    --white-2: rgba(255,255,255,0.2);
+}
+
+.identify-safety-hazards-C61RwL {
+    background-color: transparent;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    text-align: left;
+    width: auto;
+}
+
+.skills-VMr6Om {
+    background-color: transparent;
+    color: var(--black-2);
+    font-family: 'Fira Sans', Helvetica;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    text-align: left;
+    width: auto;
+}

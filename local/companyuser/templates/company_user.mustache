@@ -1,0 +1,181 @@
+<div class="container">
+		  <strong>Sign Up</strong><br><br>
+          <p>Gain access to our database of pre-screened HVAC </br> technicians - all of them looking for work</p>
+            <form action="data.php" method="post" role="form" autocomplete="off" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-md-6 form-group">
+				  <label>First Name</label>
+                  <input type="text" name="firstname" class="form-control" id="firstname" placeholder="First Name" required="">
+                </div>
+                <div class="col-md-6 form-group">
+				  <label>Last Name</label>
+                  <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Last Name" required="">
+                </div>
+              </div>
+               <div class="row mt-3">
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+				  <label>Email</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="email@website.com" required="">
+                </div>
+                <div class="col-md-6 form-group">
+				  <label>Password</label>
+                  <input type="password" name="password" class="form-control" id="password" placeholder="Password" required="" readonly onfocus="this.removeAttribute('readonly');" onblur="this.setAttribute('readonly','');">
+                </div>
+              </div>
+              <div class="row mt-3">
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+			      <label>Phone Number</label>
+                  <input type="text" class="form-control" name="contact" id="contact" placeholder="555-555-5555" required="">
+              </div>
+              <div class="col-md-6 form-group">
+			    <label>Company Name</label>
+                <input type="text" class="form-control" name="companyname" id="companyname" placeholder="Enter Company Name" required="">
+              </div>
+			  </div>
+			  
+			  <div class="row mt-3">
+                <div class="form-group col-md-6">
+				<label>State</label>
+				<div class="select">
+                <select class="form-control" name="state" id="state">
+				    <option value="">Select an Option</option>
+					<option value="Alabama">Alabama</option>
+					<option value="Alaska">Alaska</option>
+					<option value="Arizona">Arizona</option>
+					<option value="Arkansas">Arkansas</option>
+					<option value="California">California</option>
+					<option value="Colorado">Colorado</option>
+					<option value="Connecticut">Connecticut</option>
+					<option value="Delaware">Delaware</option>
+					<option value="Florida">Florida</option>
+					<option value="Georgia">Georgia</option>
+					<option value="Hawaii">Hawaii</option>
+					<option value="Idaho">Idaho</option>
+					<option value="Illinois">Illinois</option>
+					<option value="Indiana">Indiana</option>
+					<option value="Iowa">Iowa</option>
+					<option value="Kansas">Kansas</option>
+					<option value="Kentucky">Kentucky</option>
+					<option value="Louisiana">Louisiana</option>
+					<option value="Maine">Maine</option>
+					<option value="Maryland">Maryland</option>
+					<option value="Massachusetts">Massachusetts</option>
+					<option value="Michigan">Michigan</option>
+					<option value="Minnesota">Minnesota</option>
+					<option value="Mississippi">Mississippi</option>
+					<option value="Missouri">Missouri</option>
+					<option value="Montana">Montana</option>
+					<option value="Nebraska">Nebraska</option>
+					<option value="Nevada">Nevada</option>
+					<option value="New Hampshire">New Hampshire</option>
+					<option value="New Jersey">New Jersey</option>
+					<option value="New Mexico">New Mexico</option>
+					<option value="New York">New York</option>
+					<option value="North Carolina">North Carolina</option>
+					<option value="North Dakota">North Dakota</option>
+					<option value="Ohio">Ohio</option>
+					<option value="Oklahoma">Oklahoma</option>
+					<option value="Oregon">Oregon</option>
+					<option value="Pennsylvania">Pennsylvania</option>
+					<option value="Rhode Island">Rhode Island</option>
+					<option value="South Carolina">South Carolina</option>
+					<option value="South Dakota">South Dakota</option>
+					<option value="Tennessee">Tennessee</option>
+					<option value="Texas">Texas</option>
+					<option value="Utah">Utah</option>
+					<option value="Vermont">Vermont</option>
+					<option value="Virginia">Virginia</option>
+					<option value="Washington">Washington</option>
+					<option value="West Virginia">West Virginia</option>
+					<option value="Wisconsin">Wisconsin</option>
+					<option value="Wyoming">Wyoming</option>
+				</select>
+				</div>
+              </div>
+                <div class="col-md-6 form-group">
+				  <label>City</label>
+                  <input type="text" name="city" class="form-control" id="city" placeholder="Enter City" required="">
+                </div>
+              </div>
+			  <div class="row mt-3">
+					<div class="form-group col-md-6">
+					    <label>Industry</label>
+						<div class="select">
+						<select class="form-control" name="industry" id="id_industry">
+						    <option value="">Select an Option</option>
+							<option value="Residential">Residential</option>
+							<option value="Commercial">Commercial</option>
+							<option value="Residential&amp;Commercial">Residential &amp; Commercial</option>
+						</select>
+					  </div>
+					</div>
+			  </div>
+			  <br><br>
+			  <strong>Company Profile - </strong>Complete to be seen by 30% more technicians <br><br>
+			  <div class="row mt-3">
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+				  <label># number of technician employed</label>
+                  <div class="select">
+						<select class="form-control" name="position" id="id_position">
+							<option value="">Select an Option</option>
+							<option value="0-10">0-10</option>
+							<option value="10-50">10-50</option>
+							<option value="50-100">50-100</option>
+							<option value="200+">200+</option>
+						</select>
+				  </div>
+                </div>
+                <div class="col-md-6 form-group">
+				  <label># of technician to hire in the next 90 days</label>
+					<select class="form-control" name="willhire" id="id_willhire">
+						<option value="">Select an Option</option>
+						<option value="0-5">0-5</option>
+						<option value="5-10">5-10</option>
+						<option value="10-25">10-25</option>
+						<option value="25-50">25-50</option>
+						<option value="50+">50+</option>
+					</select>
+                </div>
+              </div>
+			  <div class="row mt-3">
+              <div class="col-md-12 form-group">
+			    <label>Company Description</label>
+                <textarea class="form-control" name="description" rows="3" placeholder="Insert a short description about company here. This should be 1-3 sentences"></textarea>
+              </div>
+			   </div>
+			   <div class="row mt-3">
+              <div class="col-md-12 form-group">
+			    <label>Company Logo</label>
+                <input type="file" class="form-control" name="image" id="image" />
+              </div>
+			   </div>
+			   <div class="row mt-3">
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+				  <label>Link to company facebook</label>
+                  <input type="text" class="form-control" name="facebook" id="facebook" placeholder="https://facebook.com/">
+                </div>
+                <div class="col-md-6 form-group">
+				  <label>Link to company linkedin</label>
+                  <input type="text" name="linkedin" class="form-control" id="linkedin" placeholder="https://linkedin.com/">
+                </div>
+				<div class="col-md-6 form-group">
+				  <label>Link to your Calendly interview event</label>
+                  <input type="text" name="calendly" class="form-control" id="calendly" placeholder="https://calendly.com/">
+				  <label>Dont have Calendly account <a href="https://calendly.com/" target="_blank">Click here to create one</a></label>
+                </div>
+              </div>
+              <div class="text-center"><button type="submit" id="continue">Continue</button></div>
+			   <div class="row mt-3">
+                <div class="col-md-9 form-group mt-3 mt-md-0">
+				  <label>Already have an account? <a href="login.php"> Login here </a></label>
+                </div>
+				</div>
+            
+          </div></form>
+    </div>
+	
+	
+	
+	
+	
+	

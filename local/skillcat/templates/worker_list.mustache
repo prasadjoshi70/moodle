@@ -1,0 +1,142 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template loca_tableajax/settings
+    Template for ajax table.
+
+    Context variables required for this template:
+    * expressions - List of expressions containing index, name, expression and value
+
+    Example context (json):
+    {
+        "data": [
+            { "id": "1", "eventname": "Event Name", "component": "Component", "action": "Action", "target": "Target" }
+        ]
+    }
+}}
+{{!
+    Setting devicedetectregex.
+}}
+
+<div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-up" class="aos-init aos-animate">Volunteer Form</h2>
+          <!--<p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+        </div>
+
+        <div class="row justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-xl-9 col-lg-12 mt-4">
+            <form action="data.php" method="post" role="form">
+              <div class="row">
+                <div class="col-md-4 form-group">
+                  <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name" required="">
+                </div>
+                <div class="col-md-4 form-group">
+                  <input type="text" name="mname" class="form-control" id="mname" placeholder="Middle Name">
+                </div>
+                <div class="col-md-4 form-group">
+                  <input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name" required="">
+                </div>
+              </div>
+               <div class="row mt-3">
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="text" name="age" class="form-control" id="age" placeholder="Your Age" required="">
+                </div>
+              </div>
+              <div class="row mt-3">
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" class="form-control" name="contact" id="contact" placeholder="Your Contact Number" required="">
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="text" class="form-control" name="parent" id="parent" placeholder="Name of Father/Mother" required="">
+              </div>
+			  </div>
+			  <div class="row mt-3">
+              <div class="col-md-12 form-group">
+                <textarea class="form-control" name="address" rows="5" placeholder="Address" required=""></textarea>
+              </div>
+			   </div>
+			  <div class="row mt-3">
+                <div class="form-group col-md-6">
+                <select name="state" id="state1" class="form-control" required="">
+                    <option value="">Select State</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                    </select>
+              </div>
+              <div class="form-group col-md-6">
+                <select name="district" id="district" class="form-control" required="">
+                    <option value="">Select District</option>
+                    <option value="North Goa">North Goa</option>
+                    <option value="South Goa">South Goa</option>
+                </select>
+              </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="block" class="form-control" id="block" placeholder="Enter Block" required="">
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" name="constituency" class="form-control" id="constituency" placeholder="Enter Constituency" required="">
+                </div>
+              </div>
+              <div class="text-center"><button type="submit" id="continue">Submit</button></div>
+            
+          </div></form>
+
+        </div>
+
+      </div>
+    </div>

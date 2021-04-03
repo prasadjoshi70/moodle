@@ -1,0 +1,160 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template loca_tableajax/settings
+    Template for ajax table.
+
+    Context variables required for this template:
+    * expressions - List of expressions containing index, name, expression and value
+
+    Example context (json):
+    {
+        "data": [
+            { "id": "1", "eventname": "Event Name", "component": "Component", "action": "Action", "target": "Target" }
+        ]
+    }
+}}
+{{!
+    Setting devicedetectregex.
+}}
+
+<div class="container-center-horizontal">
+    <div class="x3-3-4-1-worker-listing-all-workers-view screen">
+        <div class="flex-col-C61RwL">
+            <div class="row flex-row-0xy0vn" style="width: 100%">
+                <div class="col-5">
+                    <button href="{{{ config.wwwroot }}}/local/skillcat/worker_list.php" class="skillcat btn active">
+                        View All
+                    </button>
+                    <button href="{{{ config.wwwroot }}}/local/skillcat/job_applicants_list.php" class="skillcat btn btn-default">
+                        Job Applicants
+                    </button>
+                    <button href="{{{ config.wwwroot }}}/local/skillcat/test_completed_list.php" class="skillcat btn btn-default">
+                        Tests Completed
+                    </button>
+                </div>
+                <div class="col-7">
+                    <select name="state" id="state" multiple placeholder="State">
+                        <option value="1">option 1</option>
+                        <option value="2">option 2</option>
+                        <option value="3">option 3</option>
+                        <option value="4">option 4</option>
+                        <option value="5">option 5</option>
+                    </select>
+
+                    <select name="roles" id="roles" multiple placeholder="Roles">
+                        <option value="1">option 1</option>
+                        <option value="2">option 2</option>
+                        <option value="3">option 3</option>
+                        <option value="4">option 4</option>
+                        <option value="5">option 5</option>
+                    </select>
+
+                    <button class="skillcat btn btn-default" data-toggle="button">
+                        Certifications
+                    </button>
+                    <button class="skillcat btn btn-default" data-toggle="button">
+                        Skills
+                    </button>
+                </div>
+            </div>
+            <div class="x10-20-of-115-workers-0xy0vn">
+                <span class="span0-RX7T91">10-20</span><span class="span1-RX7T91">&nbsp;</span
+            ><span class="span2-RX7T91">of</span><span class="span3-RX7T91">&nbsp;</span
+            ><span class="span4-RX7T91">115</span><span class="span5-RX7T91">&nbsp;</span
+            ><span class="span6-RX7T91">workers</span>
+            </div>
+        </div>
+        <table class="skillcat table table-responsive-lg">
+            <thead>
+                <tr>
+                    <td>
+                        Name
+                        <div class="table_sort">
+                            {{#pix}}t/up, core{{/pix}}
+                            {{#pix}}t/down, core{{/pix}}
+                        </div>
+                    </td>
+                    <td scope="col" class="p-l-0">
+                        Location
+                        <div class="table_sort">
+                            {{#pix}}t/up, core{{/pix}}
+                            {{#pix}}t/down, core{{/pix}}
+                        </div>
+                    </td>
+                    <td scope="col" class="p-l-0">
+                        Years of HVAC Exp.
+                        <div class="table_sort">
+                            {{#pix}}t/up, core{{/pix}}
+                            {{#pix}}t/down, core{{/pix}}
+                        </div>
+                    </td>
+                    <td scope="col" class="p-l-0">
+                        Years of Skilled Trade Exp.
+                        <div class="table_sort">
+                            {{#pix}}t/up, core{{/pix}}
+                            {{#pix}}t/down, core{{/pix}}
+                        </div>
+                    </td>
+                    <td scope="col" class="p-l-0">
+                        Technician Level
+                        <div class="table_sort">
+                            {{#pix}}t/up, core{{/pix}}
+                            {{#pix}}t/down, core{{/pix}}
+                        </div>
+                    </td>
+                    <td scope="col" class="p-l-0">
+                        EPA 608 Certification
+                        <div class="table_sort">
+                            {{#pix}}t/up, core{{/pix}}
+                            {{#pix}}t/down, core{{/pix}}
+                        </div>
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                {{> local_skillcat/worker_list_table_body}}
+                {{> local_skillcat/worker_list_table_body}}
+                {{> local_skillcat/worker_list_table_body}}
+                {{> local_skillcat/worker_list_table_body}}
+                {{> local_skillcat/worker_list_table_body}}
+                {{> local_skillcat/worker_list_table_body}}
+                {{> local_skillcat/worker_list_table_body}}
+                {{> local_skillcat/worker_list_table_body}}
+                {{> local_skillcat/worker_list_table_body}}
+                {{> local_skillcat/worker_list_table_body}}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="7">
+                        <div class="flex-row-VMr6Om">
+                            <button class="skillcat btn btn-default" data-action="previous">
+                                Previous Page
+                            </button>
+                            <button class="skillcat btn btn-default" data-action="next">
+                                Next Page
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
